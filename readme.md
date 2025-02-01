@@ -67,7 +67,27 @@ python manage.py runserver
     GET /api/faqs/?lang=hi  # Hindi
     GET /api/faqs/?lang=bn  # Bengali
     ```
+# Environment Variables Setup (`.env` File)  
 
+To configure the project, create a `.env` file in the root directory and add the following environment variables:  
+
+```plaintext
+# Debug Mode (Set to False in production)
+DEBUG=True  
+
+# Django Secret Key (Replace with a secure key in production)
+SECRET_KEY='your-secret-key'  
+
+# Database Configuration
+DB_NAME=your_database_name  
+DB_USER=your_database_user  
+DB_PASSWORD=your_database_password  
+DB_HOST=your_database_host  
+DB_PORT=5432  
+
+# Redis Configuration
+REDIS_URL=redis://your_redis_host:6379/1  
+```
 ## Admin Interface
 
 Access the admin interface at [http://localhost:8000/admin](http://localhost:8000/admin) to manage FAQ content.
